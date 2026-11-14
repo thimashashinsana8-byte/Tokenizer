@@ -4,7 +4,6 @@ def tokenize(text):
 
     pattern = r"\w+|[^\w\s]"
     tokens = re.findall(pattern, text)
-    #tokens = text.split()
     return tokens
 
 
