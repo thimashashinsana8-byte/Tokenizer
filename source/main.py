@@ -1,17 +1,21 @@
-import re
+from tokenizer import tokenize
 
-def tokenize(text):
+text1 = "I don't like bad weather."
+text2 = "The price is 25.50 dollars."
+text3 = "The examination is on 2026-11-14."
+text4 = "මගේ නම තිමාෂ් ආශිංසන 😊"
 
-    pattern = r"\w+|[^\w\s]"
-    tokens = re.findall(pattern, text)
-    return tokens
+print(tokenize(text1))
+print(tokenize(text2))
+print(tokenize(text3))
+print(tokenize(text4))
 
+print("...............................")
 
-#sentence = input("Enter the sentence: ")
-sentence = "I love learning Python!"
-
+"""
+sentence = input("Enter a sentence: ")
 result = tokenize(sentence)
 numOfWords = len(result)
-
 print(result)
 print(f"The number of tokens:{(numOfWords)}")
+"""
