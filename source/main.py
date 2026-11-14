@@ -1,9 +1,14 @@
+import re
+
 def tokenize(text):
-    tokens = text.split()
+
+    pattern = r"\w+|[^\w\s]"
+    tokens = re.findall(pattern, text)
     return tokens
 
+
 #sentence = input("Enter the sentence: ")
-sentence = "I love learning Python"
+sentence = "I love learning Python!"
 
 result = tokenize(sentence)
 numOfWords = len(result)
